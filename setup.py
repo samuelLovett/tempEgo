@@ -1,4 +1,11 @@
 from setuptools import setup, find_packages
+import pathlib
+
+here = pathlib.Path(__file__).parent.resolve()
+
+# Get the long description from the README file
+long_description = (here / "README.md").read_text(encoding="utf-8")
+
 
 setup(
     name='tempEgo',
@@ -17,8 +24,8 @@ setup(
     url='https://github.com/samuelLovett/tempEgo.git',
     author='Samuel Lovett',
     author_email='samuellovett@cmail.carleton.ca',
-    description='A package for estimating ego-motion velocity using millimetre-wave (mmWave) radar. Implementation of the three methods presented in Enhancing Doppler Ego-Motion Estimation: A Temporally Weighted Approach to RANSAC.',
-    long_description=open('README.md').read(),
+    description="0A package for estimating ego-motion velocity using millimetre-wave (mmWave) radar",
+    long_description=long_description,
     long_description_content_type='text/markdown',
     classifiers=[
         'Programming Language :: Python :: 3',
