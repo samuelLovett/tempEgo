@@ -1,6 +1,6 @@
 # tempEgo
 
-tempEgo is a Python pacakge for calculating the ego-motion velocity of a sensing platform from millimetre-wave (mmWave) radar data. This package impliments the ego-motion estimation methods detailed in [Enhancing Doppler Ego-Motion Estimation: A Temporally Weighted Approach to RANSAC](link to be added).
+tempEgo is a Python package for calculating the ego-motion velocity of a sensing platform from millimetre-wave (mmWave) radar data. This package implements the ego-motion estimation methods detailed in [Enhancing Doppler Ego-Motion Estimation: A Temporally Weighted Approach to RANSAC](link to be added).
 
 
 The three methods are:
@@ -11,7 +11,7 @@ The three methods are:
 ## Prerequisites
 A method of supplying this package with mmWave data, either using a physical sensor or a pre-existing dataset. 
 
-For use with the Coloradar dataset please install the desired dataset from [here](https://arpg.github.io/coloradar/). For out of the box usage of this package with the Coloradar dataset follow the directory structure implimented [here](https://github.com/azinke/coloradar.git). If you do not need the extra functionality of the coloradar_package simply clone the repository to get the correct directory structure. 
+For use with the Coloradar dataset please install the desired dataset from [here](https://arpg.github.io/coloradar/). For out of the box usage of this package with the Coloradar dataset follow the directory structure implemented [here](https://github.com/azinke/coloradar.git). If you do not need the extra functionality of the coloradar_package simply clone the repository to get the correct directory structure. 
 
 
 ## Installation
@@ -36,7 +36,7 @@ pip install .
 
 ## Usage
 
-The _main.py_ script provides an example of how to use the each velocity esimation method.
+The _main.py_ script provides an example of how to use each velocity estimation method.
 
 **Hyperparameters:**
 
@@ -52,6 +52,17 @@ TEMPSAC & TWLSQ:
 
 To change the from the values presented in [Enhancing Doppler Ego-Motion Estimation: A Temporally Weighted Approach to RANSAC](link to be added), change their definition within the _set_kb()_ , _set_tempsac()_ , _set_twlsq()_ methods.
 
+## Results
+
+Comparison of average absolute pose error for different environments. The average absolute pose error is presented in metres.
+
+| Algorithm  | Edgar Classroom Dataset | Intelligent Robotic Lab Dataset  | Edgar Army tunnel Dataset |
+| ------------- |:-------------:| ------------- |:-------------:|
+| TEMPSAC      | 2.812     | 2.352      | **5.615**     |
+| TWLSQ      | **2.338**     | **2.166**      | 5.653     |
+| KB      | 3.644     | 3.603      | 5.672     |
+
+The average absolute pose error for 100 trials is shown in the above Table. Both our methods outperform KB, with TEMPSAC showing an average improvement of 19.5% and TWLSQ showing an average improvement of 25.3%.
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)
