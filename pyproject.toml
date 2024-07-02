@@ -1,0 +1,21 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "example_package_YOUR_USERNAME_HERE"
+version = "0.0.1"
+authors = [
+  { name="Samuel Lovett", email="samuellovett@cmail.carleton.ca" },
+]
+description = ['A package for estimating ego-motion velocity using millimetre-wave (mmWave) radar. Implementation of the three methods presented in Enhancing Doppler Ego-Motion Estimation: A Temporally Weighted Approach to RANSAC.']
+readme = "README.md"
+requires-python = ">=3.10"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/samuelLovett/tempEgo.git"

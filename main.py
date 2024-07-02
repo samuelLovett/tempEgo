@@ -172,20 +172,6 @@ class VelocityEstimation:
         current_sample = self.coloradar_dataset.get_radar_cloud(idx)
         return current_sample
 
-    def ego_velocity(self):
-        """
-        Updates the sensor values and calculates the ego velocity of the platform.
-        """
-        ransac = self.ransac
-        idx = self.start_idx
-        stop = self.stop
-
-        while idx < stop:
-            radar_cloud = self.update_buffer(idx)
-            velocities_at_idx = ransac.separate_points(radar_cloud)
-            print(velocities_at_idx)
-            idx = idx + 1
-
 
 class TWLSQVelEstimate(VelocityEstimation):
     """
@@ -343,25 +329,41 @@ class TEMPSACVelEstimate(TWLSQVelEstimate):
         return self.buffer_of_sample_tensors, weights
 
 
+
 def main():
+    """
+    Example main function. \n
+    Modify the paths contained in datasets_dic and calib_dir defined in the class VelocityEstimation __init__ function if using a different directory structure than described in the readme.
+    """
+
     datasets_dic = {'classroom': 'coloradar_package/dataset/2_23_2021_edgar_classroom_run4/',
                     'irl': 'coloradar_package/dataset/12_21_2020_arpg_lab_run1/',
                     'army': 'coloradar_package/dataset/2_23_2021_edgar_army_run2/'}
 
-    key = 'army'
+    key = 'classroom'
     dataset = datasets_dic[key]
 
     start_time = time.time()
-    KB = set_KB(dataset)
 
+
+    KB = set_KB(dataset)
     # my_TWLSQ = set_TWLSQ(dataset)
     # TEMPSAC = set_TEMPSAC(dataset)
 
-    KB.ego_velocity()
-    end_time = time.time()
-    # my_TWLSQ.ego_velocity()
-    # TEMPSAC.ego_velocity()
+    """
+    Enter your code here. The following loop calculates the ego velocity of the platform.
+    """
+    ransac = KB.ransac
+    idx = KB.start_idx
+    stop = KB.stop
 
+    while idx < stop:
+        radar_cloud = KB.update_buffer(idx)
+        velocities_at_idx = ransac.separate_points(radar_cloud)
+        print(velocities_at_idx)
+        idx = idx + 1
+
+    end_time = time.time()
     elapsed_time = end_time - start_time
 
     print(f"Elapsed time: {elapsed_time} seconds")
