@@ -79,7 +79,7 @@ File "C:\path-to-package\tempEgo\dataset_loaders.py", line *some number*, in *so
     t, r = read_tf_file(tf_filename)
 TypeError: cannot unpack non-iterable NoneType object
 ```
-It is likely being caused by a path error to a file within the data set like the config file or the location to the dataset itself. 
+It is likely being caused by a path error to a file within the dataset (like the config file or the path to the dataset itself). 
 
 ## License
 
