@@ -8,8 +8,8 @@ RANdom SAmple Consensus program described in Sec. II B. of [1]
 
 [1] Enhancing Doppler Ego-Motion Estimation: A Temporally Weighted Approach to RANSAC
 """
-from utils.data_unpacker import data_unpacker_tensor_object
-from utils.least_squares import least_squares_velocity_analysis
+from tempEgo.data_unpacker import data_unpacker_tensor_object
+from tempEgo.least_squares import least_squares_velocity_analysis
 import numpy as np
 
 rng = np.random.default_rng()

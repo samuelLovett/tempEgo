@@ -12,7 +12,7 @@ Program described executes the logic described in Sec. II A. and C. of [1]
       The International Journal of Robotics Research. 2022;41(4):351-360. doi:10.1177/02783649211068535
 """
 
-from dataset_loaders import *
+from tempEgo.dataset_loaders import *
 import numpy as np
 from scipy.spatial.transform import Rotation, Slerp
 

@@ -22,9 +22,9 @@ estimate of the body frame linear velocity.
 [1] Enhancing Doppler Ego-Motion Estimation: A Temporally Weighted Approach to RANSAC
 """
 
-from utils.error_and_loss_function import square_error_loss, mean_square_error
-from utils.external_dataset_import import *
-from utils import RANSAC
+from tempEgo.error_and_loss_function import square_error_loss, mean_square_error
+from tempEgo.external_dataset_import import *
+from tempEgo import RANSAC
 import numpy as np
 from collections import deque
 import time
