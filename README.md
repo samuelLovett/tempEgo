@@ -16,7 +16,7 @@ For use with the Coloradar dataset please install the desired dataset from [here
 
 ## Installation
 
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install tempEgo.
+Use the package manager [pip](https://pip.pypa.io/en/stable/) to install [tempEgo](https://pypi.org/project/tempEgo/).
 
 ```bash
 pip install tempEgo
