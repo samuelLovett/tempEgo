@@ -1,6 +1,6 @@
 # tempEgo
 
-tempEgo is a Python package for calculating the ego-motion velocity of a sensing platform from millimetre-wave (mmWave) radar data. This package implements the ego-motion estimation methods detailed in [Enhancing Doppler Ego-Motion Estimation: A Temporally Weighted Approach to RANSAC](link to be added).
+tempEgo is a Python package for calculating the 2D ego-motion velocity of a sensing platform from 2D millimetre-wave (mmWave) radar data. This package implements the ego-motion estimation methods detailed in [Enhancing Doppler Ego-Motion Estimation: A Temporally Weighted Approach to RANSAC](link to be added).
 
 
 The three methods are:
