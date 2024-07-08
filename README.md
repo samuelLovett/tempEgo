@@ -1,12 +1,14 @@
 # tempEgo
 
-tempEgo is a Python package for calculating the 2D ego-motion velocity of a sensing platform from 2D millimetre-wave (mmWave) radar data. This package implements the ego-motion estimation methods detailed in [Enhancing Doppler Ego-Motion Estimation: A Temporally Weighted Approach to RANSAC](link to be added).
+tempEgo is a Python package for calculating the 2D ego-motion velocity of a sensing platform from 2D millimetre-wave (mmWave) radar data. This package implements the three ego-motion estimation methods detailed in [Enhancing Doppler Ego-Motion Estimation: A Temporally Weighted Approach to RANSAC](link to be added).
 
 
 The three methods are:
 * KB: Traditional ego-motion estimation technique as detailed in D. Kellner et al., "[Instantaneous ego-motion estimation using doppler radar](https://doi.org/10.1109/ITSC.2013.6728341)," in 16th ITSC, 2013, pp. 869–874
 * TEMPSAC: TEMporal SAmpling Consensus implements a weighted sliding window of sensor measurements biasing the algorithm to estimate the velocity using newer samples in time.
 * TWLSQ: Temporally Weighted Least Squares implements a sliding window and temporal weighting scheme for model fitting.
+
+
 
 ## Prerequisites
 A method of supplying this package with mmWave data, either using a physical sensor or a pre-existing dataset. 
@@ -84,3 +86,14 @@ It is likely being caused by a path error to a file within the dataset (like the
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)
+
+## Acknowledgement
+I would like to acknowledge the support of the [bioMechatronics Lab](https://biomechatronics.ca/) as well as my supervisors Dr. Carlos Rossa and Dr. Sreeraman Rajan in the creation of [Enhancing Doppler Ego-Motion Estimation: A Temporally Weighted Approach to RANSAC](link to be added).
+ 
+
+## Citation
+When citing our work please use:
+
+```
+Citation to be added
+```
