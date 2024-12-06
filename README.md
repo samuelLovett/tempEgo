@@ -95,5 +95,7 @@ I would like to acknowledge the support of the [bioMechatronics Lab](https://bio
 When citing our work please use:
 
 ```
-Citation to be added
+S. Lovett, K. MacWilliams, S. Rajan and C. Rossa, "Enhancing Doppler Ego-Motion Estimation:
+A Temporally Weighted Approach to RANSAC," 2024 IEEE Sensors Applications Symposium (SAS),
+Naples, Italy, 2024, pp. 1-6, doi: 10.1109/SAS60918.2024.10636553.
 ```
