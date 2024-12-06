@@ -231,7 +231,7 @@ class TEMPSAC(RANSAC):
 
     def separate_points(self, buffer):
         """
-        Filter the inlier point from the outlier points using RANSAC and TWLSQ and return the body velocity. \n
+        Filter the inlier point from the outlier points using TEMPSAC and return the body velocity. \n
         return vel: list containing the x and y body velocity [velocity in x, velocity in y]
         :param buffer: multidimensional list of measurement data [theta, doppler] (2, number of samples)
         :return: vel
