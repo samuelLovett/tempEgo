@@ -1,6 +1,6 @@
 # tempEgo
 
-tempEgo is a Python package for calculating the 2D ego-motion velocity of a sensing platform from 2D millimetre-wave (mmWave) radar data. This package implements the three ego-motion estimation methods detailed in [Enhancing Doppler Ego-Motion Estimation: A Temporally Weighted Approach to RANSAC](link to be added).
+tempEgo is a Python package for calculating the 2D ego-motion velocity of a sensing platform from 2D millimetre-wave (mmWave) radar data. This package implements the three ego-motion estimation methods detailed in [Enhancing Doppler Ego-Motion Estimation: A Temporally Weighted Approach to RANSAC](https://ieeexplore.ieee.org/abstract/document/10636553).
 
 
 The three methods are:
@@ -50,9 +50,9 @@ Shared:
 
 TEMPSAC & TWLSQ:
 * buffer_size: Size of the sliding window (m)
-* fff_lambda: fixed forgetting factor as defined in (14) of [Enhancing Doppler Ego-Motion Estimation: A Temporally Weighted Approach to RANSAC](link to be added). 0 uses only the most recent samples and 1 uses all samples equally.
+* fff_lambda: fixed forgetting factor as defined in (14) of [Enhancing Doppler Ego-Motion Estimation: A Temporally Weighted Approach to RANSAC](https://ieeexplore.ieee.org/abstract/document/10636553). 0 uses only the most recent samples and 1 uses all samples equally.
 
-To change the from the values presented in [Enhancing Doppler Ego-Motion Estimation: A Temporally Weighted Approach to RANSAC](link to be added), change their definition within the _set_kb()_ , _set_tempsac()_ , _set_twlsq()_ methods.
+To change the values presented in [Enhancing Doppler Ego-Motion Estimation: A Temporally Weighted Approach to RANSAC](https://ieeexplore.ieee.org/abstract/document/10636553), change their definition within the _set_kb()_ , _set_tempsac()_ , _set_twlsq()_ methods.
 
 ## Results
 
@@ -88,7 +88,7 @@ It is likely being caused by a path error to a file within the dataset (like the
 [MIT](https://choosealicense.com/licenses/mit/)
 
 ## Acknowledgement
-I would like to acknowledge the support of the [bioMechatronics Lab](https://biomechatronics.ca/) as well as my supervisors Dr. Carlos Rossa and Dr. Sreeraman Rajan in the creation of [Enhancing Doppler Ego-Motion Estimation: A Temporally Weighted Approach to RANSAC](link to be added).
+I would like to acknowledge the support of the [bioMechatronics Lab](https://biomechatronics.ca/) as well as my supervisors Dr. Carlos Rossa and Dr. Sreeraman Rajan in the creation of [Enhancing Doppler Ego-Motion Estimation: A Temporally Weighted Approach to RANSAC](https://ieeexplore.ieee.org/abstract/document/10636553).
  
 
 ## Citation
